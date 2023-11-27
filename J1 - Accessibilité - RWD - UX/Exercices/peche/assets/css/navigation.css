@@ -1,0 +1,9 @@
+ /* Ajoute des styles spécifiques à cet exemple si nécessaire */
+ .navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    margin-bottom: 1em;
+}
