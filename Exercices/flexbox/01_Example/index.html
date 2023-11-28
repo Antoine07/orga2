@@ -18,45 +18,67 @@
       font-size: 16px;
     }
 
-    .main{
+    .main {
       /* les éléments à l'intérieur de la section sont des boites flexibles  */
       display: flex;
-      flex-wrap: wrap;
+      /* retour de bloc à la ligne quand plus d'espace sans cassé le conteneur pour les blocs à l'intérieur du main */
+      flex-flow: wrap;
+      /* de l'espace entre les blocs */
+      /* justify-content: space-between; */
+      margin: 0 auto;
+      width: 80%;
     }
 
-    .content{
-      padding : 0.5em;
+    .content {
+      padding: 0.5em;
       background: aqua;
       /* les blocs flex se répartissent l'espace dans le conteneur */
-      flex :1; 
+      flex : 1; 
+      border: 1px solid black;
+    }
+
+    .content:nth-of-type(1)> div.sub-content {
+      display: flex;
+      flex-flow: wrap;
+      /* justify-content: space-between; */
+    }
+
+    .sub-content p {
+      flex : 1;
+      border: 1px solid black;
+      padding: 1em;
     }
 
     /* 
       Créez des sous blocs dans le premier article pour mettre trois blocs en ligne qui occupe le même espace dans ce bloc
     */
-
   </style>
 </head>
 
 <body>
-<section class="main">
- 
-  <article class="content">
-    <h2>This article</h2>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>Quam veritatis ducimus aliquam aliquid!</p>
-  </article>
-  <article class="content">
-    <h2>This article</h2>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>Quam veritatis ducimus aliquam aliquid!</p>
-  </article>
-  <article class="content">
-    <h2>This article</h2>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <p>Quam veritatis ducimus aliquam aliquid!</p>
-  </article>
-</section>
+  <section class="main">
+
+    <article class="content">
+      <h2>This article</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Quam veritatis ducimus aliquam aliquid!</p>
+      <div class="sub-content">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Sit assumenda quae vero voluptatibus?</p>
+        <p>Temporibus dignissimos beatae nesciunt cumque.</p>
+      </div>
+    </article>
+    <article class="content">
+      <h2>This article</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Quam veritatis ducimus aliquam aliquid!</p>
+    </article>
+    <article class="content">
+      <h2>This article</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Quam veritatis ducimus aliquam aliquid!</p>
+    </article>
+  </section>
 </body>
 
 </html>
