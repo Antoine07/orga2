@@ -32,12 +32,17 @@
     .content {
       padding: 0.5em;
       background: aqua;
-      /* les blocs flex se répartissent l'espace dans le conteneur */
+      /* les blocs flex se répartissent l'espace dans le conteneur, ici 3 blocs */
       flex : 1; 
       border: 1px solid black;
     }
+    /* le permier paragraphe aura deux fois plus d'espace */
+    .content:first-child {
+      /* les blocs flex se répartissent l'espace dans le conteneur, ici 3 blocs */
+      flex : 2; 
+    }
 
-    .content:nth-of-type(1)> div.sub-content {
+    .content:nth-of-type(1) > div.sub-content {
       display: flex;
       flex-flow: wrap;
     }
@@ -45,7 +50,9 @@
     .sub-content p {
       flex : 1;
       border: 1px solid black;
-      padding: 1em;
+      padding: 0.2em;
+      margin: 0.2em ;
+      max-width: 30%; 
     }
 
     /* 
