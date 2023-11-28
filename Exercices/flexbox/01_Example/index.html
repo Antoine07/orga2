@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example 01 flexbox</title>
+  <style>
+    /* emets
+      section>article*3>h2{This article}+p>lorem10
+    */
+    html {
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .main{
+      /* les éléments à l'intérieur de la section sont des boites flexibles  */
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .content{
+      padding : 0.5em;
+      background: aqua;
+      /* les blocs flex se répartissent l'espace dans le conteneur */
+      flex :1; 
+    }
+
+    /* 
+      Créez des sous blocs dans le premier article pour mettre trois blocs en ligne qui occupe le même espace dans ce bloc
+    */
+
+  </style>
+</head>
+
+<body>
+<section class="main">
+ 
+  <article class="content">
+    <h2>This article</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Quam veritatis ducimus aliquam aliquid!</p>
+  </article>
+  <article class="content">
+    <h2>This article</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Quam veritatis ducimus aliquam aliquid!</p>
+  </article>
+  <article class="content">
+    <h2>This article</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Quam veritatis ducimus aliquam aliquid!</p>
+  </article>
+</section>
+</body>
+
+</html>
