@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      justify-content: flex-start; /* Aligner à gauche */
+      align-items: center;
+      height: 100vh; /* Hauteur à 100% de la vue */
+    }
+
+    .square {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+
+    .square:nth-child(1) {
+      background-color: red;
+      align-self: center; /* Centrer verticalement */
+    }
+
+    .square:nth-child(2) {
+      background-color: blue;
+      align-self: flex-start; /* Aligner en haut */
+    }
+
+    .square:nth-child(3) {
+      background-color: green;
+      align-self: flex-end; /* Aligner en bas */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+</body>
+</html>

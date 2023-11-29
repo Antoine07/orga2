@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 16px;
+        }
+        .container{
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container div {
+            border: 1px solid black;
+            margin: 0.5em;
+            padding: 1em;
+        }
+        ._1{
+            min-height: 100px;
+        }
+        ._2{
+            min-height: 150px;
+        }
+        ._3{
+            min-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="_1">1</div>
+        <div class="_2">2</div>
+        <div class="_3">3</div>
+    </div>
+</body>
+</html>
