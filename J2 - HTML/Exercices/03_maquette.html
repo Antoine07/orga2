@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette 01</title>
+    <style>
+        /* 
+---------------
+    X X X
+      X
+      X
+      X
+---------------
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            background-color: antiquewhite;
+            justify-content: center;
+        }
+
+        .c1,
+        .c2,
+        .c3 {
+            /* les lettres sont également des éléments de type contenu */
+            display: flex;
+            font-size: 5em;
+            padding: 0.5em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .c1 {}
+
+        .c2 {}
+
+        @media all and (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="c1"><span>X</span></div>
+        <div class="c2"><span>X</span></div>
+        <div class="c3"><span>X</span></div>
+    </div>
+</body>
+
+</html>

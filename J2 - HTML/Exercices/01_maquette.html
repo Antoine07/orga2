@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette 01</title>
+    <style>
+        /* 
+-----------------
+X
+        X
+                X
+-----------------
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            background-color: antiquewhite;
+            
+        }
+        .c1, .c2, .c3{ 
+            width: 200px; 
+            height: 200px; 
+            display: flex;
+            font-size: 5em;
+        }
+        .c1{
+            align-self:flex-start;
+        }
+        .c2{
+            align-self:center;
+            justify-content: center;
+            align-items: center;
+        }
+        .c3{
+            align-self:flex-end;
+            justify-content:end;
+            align-items:flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="c1"><span>X</span></div>
+        <div class="c2"><span>X</span></div>
+        <div class="c3"><span>X</span></div>
+    </div>
+</body>
+</html>
