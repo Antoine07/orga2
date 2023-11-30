@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette 01</title>
+    <style>
+        /* 
+-----------------
+                X
+X
+
+        X
+-----------------
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+            /* flex-direction: column; */
+            /* align-items:flex-end; */
+            min-height: 200px;
+            background-color:aqua;
+            width: 80%;
+        }
+        .c1, .c2, .c3{ 
+          background-color: bisque;
+          margin: 0.2em;
+          width: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .c1{
+        }
+        .c2{
+        }
+        .c3{
+            height: 100px;
+            align-self: flex-end;
+            /* flex-grow : 1; */
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+      
+        <article class="c3"><p>3</p></article>
+    </section>
+</body>
+</html>
