@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example 01 flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    .grid-4 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      margin: 0.2em auto 0;
+      width: 80%;
+    }
+
+    /* Pour tous les enfants directs ( permière génération ) */
+    .grid-4 > * {
+      width: 23%;
+      background-color: bisque;
+    }
+
+    article > p {
+      padding: 0.8em;
+    }
+
+    .banner {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .main-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .main-menu li {
+      margin-right: 20px;
+    }
+
+    .main-menu a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Style pour le lien survolé */
+    .main-menu a:hover {
+     
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .grid-4 {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+
+        width: 100%;
+      }
+
+      .grid-4>* {
+        width: 100%;
+      }
+
+      /* tous sauf le dernier */
+      .grid-4> *:not(:last-child) {
+        margin-bottom: 0.2em;
+      }
+
+      .banner{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="banner">
+    <nav class="main-menu">
+      <ul >
+        <li><a href="#">A</a></li>
+        <li><a href="#">B</a></li>
+        <li><a href="#">C</a></li>
+        <li><a href="#">D</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="grid-4">
+    <article>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nulla eligendi illo, magni iure ipsam optio
+        molestias eaque consequatur assumenda tempora quas excepturi, molestiae consectetur. Veniam similique ratione
+        eum provident?</p>
+    </article>
+    <article>2.</article>
+    <article>3.</article>
+    <article>4.</article>
+  </section>
+</body>
+
+</html>
