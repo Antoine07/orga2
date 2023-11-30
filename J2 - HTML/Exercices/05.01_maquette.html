@@ -7,10 +7,9 @@
     <style>
         /* 
 -----------------
-                X
-X
 
-        X
+
+                X
 -----------------
         */
         *{
@@ -22,8 +21,10 @@ X
         }
         .container {
             display: flex;
-            /* flex-direction: column; */
-            /* align-items:flex-end; */
+            /* défint l'axe princpal par défaut row l'axe horizontal et column la colonne vertical */
+            flex-direction:row-reverse;
+            /* On définit pour les blocs l'axe secondaire position agira sur tous les blocs contenus */
+            /* align-items: flex-end; */
             min-height: 200px;
             background-color:aqua;
             width: 80%;
@@ -42,8 +43,8 @@ X
         }
         .c3{
             height: 100px;
+            /* On surcharge la définition générale, le rédéfinit */
             align-self: flex-end;
-            /* flex-grow : 1; */
         }
     </style>
 </head>
