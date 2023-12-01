@@ -1,0 +1,101 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #45a049;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem;
+  border: thin solid silver;
+  border-radius: 0.15rem;
+  font-family: Roboto, Arial, sans-serif;
+  color: #222;
+}
+
+/* Permet d'aligner horizontalement les checkbox et les radio buttons avec leurs label */
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+/* Donne un style aux boutons de validation et de réinitialisation */
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+/* Stylise les champs de formulaire lorsqu'ils sont invalides ou valides */
+
+input:required,
+input:invalid {
+  border-color: #d50000;
+}
+
+input:valid {
+  border-color: green;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  /* Empêche le redimensionnement horizontal proposé par défaut par le  navigateur */
+}
+
+fieldset {
+  margin: 1.5rem 0;
+  border: thin solid silver;
+  border-radius: 0.15rem;
+}
+
+legend {
+  font-style: italic;
+  color: #666;
+}
+
+@media (max-width: 600px)  {
+  form {
+    padding: 100px;
+    background-color: red;
+  }
+}

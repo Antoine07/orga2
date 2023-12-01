@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+  <form>
+    <label for="name">Nom complet :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Numéro de téléphone :</label>
+    <input type="tel" id="phone" name="phone" pattern="(0|\+33)[1-9]([\-\. ]?[0-9]{2}){4}" required>
+
+    <label for="birthdate">Date de naissance :</label>
+    <input type="date" id="birthdate" name="birthdate">
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required>
+
+    <fieldset>
+      <legend>Options d'abonnement :</legend>
+      <input type="checkbox" id="newsletter" name="newsletter">
+      <label for="newsletter">Recevoir la newsletter</label>
+
+      <input type="checkbox" id="offers" name="offers">
+      <label for="offers">Recevoir les offres promotionnelles</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Méthode de paiement :</legend>
+      <input type="radio" id="creditcard" name="paymentmethod" value="creditcard">
+      <label for="creditcard">Carte de crédit</label>
+
+      <input type="radio" id="paypal" name="paymentmethod" value="paypal">
+      <label for="paypal">PayPal</label>
+
+      <input type="radio" id="check" name="paymentmethod" value="check">
+      <label for="check">Chèque</label>
+    </fieldset>
+
+    <label for="comments">Commentaires :</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <input type="reset" value="Effacer">
+    <input type="submit" value="Envoyer">
+  </form>
+
+</body>
+
+</html>
